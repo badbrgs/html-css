@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            /* min-width: 320px; tamanho celulares antigos*/
+            min-width: 320px;
+            max-width: 800px;
+            margin: auto;
+            /* margin auto centraliza horizontalmente na janela */
+        }
+
+        img {
+            width: 100%;
+            /* largura 100% a largura da imagem vai ser sempre o valor total da largura da caixa (vai aumentar o tamanho dela para caber, dependendo) */
+            margin: auto;
+            /* min-width: 10%;
+            max-width: 100%;
+            A imagem vai ficar com o máximo do tamanho que ela tem originamente, e com o mínimo adquado para celular. Se colocar somente:
+            img{
+                width: 100%;
+            }
+            a imagem vai expandir mais do que o tamanho que ela tem originalmente. */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Testando responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic unde aperiam doloremque quaerat totam possimus
+            dignissimos accusantium ipsam ipsa ex iure aspernatur ea ducimus quae, quas maiores sapiente itaque dolorum.
+            Doloremque repellendus aspernatur consequatur laudantium nihil ratione, voluptate modi recusandae delectus
+            doloribus eligendi, dolorem amet, molestias unde expedita architecto ipsum. Eligendi, veniam. Animi
+            excepturi, illo accusantium suscipit voluptatum culpa consequatur.
+            Quia cum maxime illo, debitis nihil culpa magni reiciendis dolorem sapiente voluptates molestias sunt
+            quaerat nobis aliquid illum mollitia aperiam placeat repellendus nesciunt, tempore recusandae, ipsum
+            asperiores? Velit, saepe distinctio.</p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Blok">
+        </picture>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aperiam unde, praesentium eum sint quam
+            exercitationem ratione perferendis vitae illum impedit itaque voluptates provident dicta architecto corporis
+            reiciendis, recusandae deserunt!
+            Ipsum nulla, consequuntur magnam temporibus sequi earum amet vel molestiae est omnis esse! Commodi
+            exercitationem doloremque consectetur animi ullam, excepturi mollitia, quidem praesentium id adipisci
+            facilis sapiente tempora minima voluptas!
+            Voluptatum eos veniam, eveniet quo pariatur molestias, quibusdam enim veritatis neque doloribus deleniti
+            reprehenderit minus esse odit recusandae ut quasi expedita impedit possimus. Culpa at quibusdam fuga sint
+            accusantium a.</p>
+    </main>
+</body>
+
+</html>
