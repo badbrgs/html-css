@@ -62,8 +62,8 @@ header>p {
     /* quando colocamos largura máx de 500 no parágrafo, ele automaticamente vira um bloco e não fica centralizado. Por isso colocamos o margin auto abaixo, para centralizar o bloco horizontalmente na tela */
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 50px;
     margin: auto;
-    margin-bottom: 20px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
 }
 
