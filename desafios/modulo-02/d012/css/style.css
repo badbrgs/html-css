@@ -16,33 +16,99 @@
     padding: 0px;
 }
 
-a {
+html,
+body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header a,
+footer a {
     color: var(--cor0);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bolder;
+}
+
+header a:hover,
+footer a:hover {
+    text-decoration: underline;
 }
 
 header {
     background-color: var(--cor1);
     color: var(--cor0);
+    text-align: center;
 }
 
 header>h1 {
-    font-family: var(--fonte2), sans-serif;
+    font-family: var(--fonte2);
     font-weight: bold;
     font-style: normal;
+    /* text-transform: uppercase; -- deixar todas maiúsculas */
+    font-variant: small-caps;
+    /* font-variant é outra variação de como deixar maiúscula */
+    padding-top: 50px;
+    font-size: 10vw;
+    /* 10% da largura da viewport, ao diminuir diminui a fonte junto */
 }
 
-body {
-    font-family: var(--fonte1);
+header>p {
+    padding-bottom: 50px;
 }
 
 main {
     font-family: var(--fonte3);
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+    /* 3,5% da largura da viewport, ao diminuir diminui a fonte junto */
+}
+
+
+section>p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: var(--cor0);
     color: var(--cor1);
+}
+
+section.imagem {
+    background-color: var(darkgray);
+    color: var(--cor0);
+    box-shadow: inset 0px 0px 16px 0px rgba(0, 0, 0, 0.473);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem>p {
+    display: inline-block;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px var(--cor1);
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
 }
 
 footer {
     background-color: var(--cor1);
     color: var(--cor0);
+    text-align: center;
+    padding: 10px;
 }
