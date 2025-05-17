@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparação: Layout Responsivo vs Adaptativo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .bloco {
+      padding: 20px;
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .responsivo {
+      background-color: lightgreen;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .adaptativo {
+      background-color: lightblue;
+    }
+
+    /* Layout adaptativo com larguras fixas por faixa */
+    @media (max-width: 600px) {
+      .adaptativo {
+        width: 300px;
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .adaptativo {
+        width: 600px;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .adaptativo {
+        width: 800px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Comparação entre Layout Responsivo e Adaptativo</h1>
+
+  <div class="container">
+    <div class="bloco responsivo">
+      <h2>Responsivo</h2>
+      <p>Esta caixa se ajusta de forma fluida à largura da tela. Experimente redimensionar!</p>
+    </div>
+
+    <div class="bloco adaptativo">
+      <h2>Adaptativo</h2>
+      <p>Esta caixa muda de tamanho em "degraus" conforme a largura da tela. Veja o salto!</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  html {
+    font-size: 16px; /* 1rem = 16px */
+  }
+
+  .rem {
+    font-size: 2rem; /* 2 x 16px = 32px */
+  }
+
+  .em {
+    font-size: 2em; /* 2 x tamanho da fonte do pai */
+  }
+
+  .pai {
+    font-size: 10px;
+  }
+
+  .pai .filho-em {
+    font-size: 2em; /* 2 x 10px = 20px */
+  }
+
+  .pai .filho-rem {
+    font-size: 2rem; /* 2 x 16px = 32px */
+  }
+</style>
+</head>
+<body>
+    <div class="rem">Texto com 2rem (32px)</div>
+<div class="em">Texto com 2em (32px, porque o pai tem 16px)</div>
+
+<div class="pai">
+  <div class="filho-em">Filho com 2em (20px)</div>
+  <div class="filho-rem">Filho com 2rem (32px)</div>
+</div>
+</body>
+</html>

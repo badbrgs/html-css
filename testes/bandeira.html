@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Bandeira do Brasil</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      background-color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bandeira {
+      position: relative;
+      width: 80vmin;
+      height: 56vmin; /* proporção aproximada da bandeira 10:7 */
+    }
+
+    .losango {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 70%;
+      height: 70%;
+      background-color: yellow;
+      transform: translate(-50%, -50%) rotate(45deg);
+      z-index: 1;
+    }
+
+    .circulo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 35%;
+      height: 35%;
+      background-color: blue;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .faixa {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      height: 8%;
+      background-color: white;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      z-index: 3;
+      text-align: center;
+      line-height: 2.5vmin;
+      font-size: 2vmin;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .estrelas {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 4;
+    }
+
+    .estrela {
+      position: absolute;
+      width: 0.8vmin;
+      height: 0.8vmin;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    /* Posições simplificadas de estrelas */
+    .estrela1 { top: 20%; left: 40%; }
+    .estrela2 { top: 25%; left: 50%; }
+    .estrela3 { top: 30%; left: 60%; }
+    .estrela4 { top: 50%; left: 45%; }
+    .estrela5 { top: 55%; left: 55%; }
+    .estrela6 { top: 60%; left: 50%; }
+    .estrela7 { top: 65%; left: 60%; }
+
+  </style>
+</head>
+<body>
+  <div class="bandeira">
+    <div class="losango"></div>
+    <div class="circulo">
+      <div class="estrelas">
+        <div class="estrela estrela1"></div>
+        <div class="estrela estrela2"></div>
+        <div class="estrela estrela3"></div>
+        <div class="estrela estrela4"></div>
+        <div class="estrela estrela5"></div>
+        <div class="estrela estrela6"></div>
+        <div class="estrela estrela7"></div>
+      </div>
+    </div>
+    <div class="faixa">ORDEM E PROGRESSO</div>
+  </div>
+</body>
+</html>
