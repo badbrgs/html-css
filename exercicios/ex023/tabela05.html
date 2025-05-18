@@ -7,7 +7,6 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 20px;
         }
 
         table {
@@ -22,27 +21,38 @@
             text-align: left;
         }
 
-        th {
-            background-color: #f2f2f2;
-        }
-
         caption {
             font-size: 1.5em;
             margin-bottom: 10px;
+        }
+
+        col.cnome {
+            background-color: chartreuse;
+        }
+
+        col.cgrupo {
+            background-color: yellow;
         }
     </style>
 </head>
 
 <body>
-
+    <h1>Exercício de Tabela</h1>
     <table>
+        <colgroup>
+            <!-- destacar colunas (para destacar linhas, class no tr) -->
+            <col class="cnome">
+            <col class="cgrupo" span="2">
+            <!-- span 2 = tudo que for colocado para cgrupo vai pegar em 2 colunas -->
+            <col class="cprof">
+        </colgroup>
         <caption>Cadastro de Pessoas</caption>
         <thead>
             <tr>
-                <th>Nome</th>
-                <th>Sexo</th>
-                <th>Idade</th>
-                <th>Profissão</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Profissão</th>
             </tr>
         </thead>
         <tbody>
