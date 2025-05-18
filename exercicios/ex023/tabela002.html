@@ -13,6 +13,8 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+            /* precisa colocar position relative na tabela pra funcionar o cabeçalho sticky */
         }
 
         th,
@@ -21,9 +23,32 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px;
+            color: white;
+            background-color: gray;
+        }
+
+        tbody>tr:nth-child(2n) {
+            /* zebrado de 2 em 2. Pode-se usar odd (par) ou even (ímpar) ou ainda 2n-1 para par 2n para ímpar */
+            background-color: #efefef;
+
+        }
+
+        thead>tr>th {
+            position: sticky;
+            top: -1px;
+            /* cabeçalho com position sticky gruda no topo
+            ** não está funcionando em todos os navegadores **
+            */
+            background-color: #ccc;
+        }
+
         thead,
         tfoot {
-            background-color: gray;
+            background-color: #ccc;
             color: white;
         }
 
@@ -40,6 +65,7 @@
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!-- ANATOMIA PARA TABELAS GRANDES
+        CAPTION = título da tabela
         TABLE
             THEAD
                 TR, TD, TH
@@ -49,11 +75,15 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
-                <th>% da pop. total</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 80px;">População</th>
+                <th scope="col" style="width: 80px;">% da pop. total</th>
+                <!-- fazer sentido nos mecanismos de busca
+                 scope col = título da coluna
+                  -->
             </tr>
         </thead>
         <tbody>
@@ -195,7 +225,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
+                <!-- scope row = título da linha -->
                 <td class="num"><strong>212.583.750</strong></td>
                 <td class="num"><strong>100%</strong></td>
             </tr>
