@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95vw;
+            border: 2px solid black;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur expedita consequuntur, vel ipsum accusamus
+        unde a ducimus earum, aliquid soluta culpa voluptatibus deserunt beatae cumque hic sequi architecto, nobis
+        perspiciatis.</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="frame">Primeira página</a></li>
+        <li><a href="paginas-extras/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="frame">Terceira página</a></li>
+    </ul>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis ratione inventore, provident numquam pariatur
+        architecto repellat! Suscipit, optio culpa deserunt odit tempora alias nobis dignissimos. Aut ex numquam nam
+        debitis.
+        Esse rerum nobis atque reprehenderit labore sunt odit, qui distinctio accusamus consequuntur ullam, quia harum
+        sequi unde ex. Eum vitae quibusdam dicta alias aliquid nam enim voluptatibus iste, ex consequuntur!</p>
+    <iframe src="" id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur expedita consequuntur, vel ipsum accusamus
+        unde a ducimus earum, aliquid soluta culpa voluptatibus deserunt beatae cumque hic sequi architecto, nobis
+        perspiciatis.</p><img src='imagens/logo_curso.png'>">
+        <!-- o iframe precisa ter um name para botar target no link -->
+        <!-- parâmetro srcdoc permite vc inserir html dentro dele -->
+        <p>Infelizmente seu navegador não é compatível com isso</p>
+    </iframe>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus voluptates illum, suscipit eum, saepe,
+        numquam omnis qui blanditiis repellendus explicabo ullam commodi asperiores reprehenderit! Sed molestiae in non
+        eveniet eius!
+        Commodi assumenda eos, officia libero itaque tenetur. Nemo voluptatem cumque accusantium cum. Delectus aut amet
+        est recusandae provident eaque vel assumenda, beatae enim blanditiis reiciendis aliquid dolor exercitationem
+        quia ratione?</p>
+</body>
+
+</html>
