@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Chart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        :root {
+            --cor00: #b2d235;
+            --cor01: #ffdd00;
+            --cor02: #f2c900;
+            --cor03: #d6ae05;
+            --cor04: #e81e26;
+            --cor05: #fff197;
+
+            --fonte01: "Roboto", Arial, sans-serif;
+        }
+
+        body {
+            font-size: 0px;
+            background-color: var(--cor00);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: var(--fonte01);
+            font-weight: bolder;
+        }
+
+        .circulo_ico {
+            display: inline-block;
+            border-radius: 50%;
+            width: 78px;
+            height: 78px;
+        }
+
+        .ico01 {
+            background-color: var(--cor01);
+        }
+
+        .ico02 {
+            background-color: var(--cor02);
+        }
+
+        .ico03 {
+            background-color: var(--cor03);
+        }
+
+        .ico04 {
+            background-color: var(--cor04);
+        }
+
+        .icone {
+            width: 34px;
+            margin-top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .titulo {
+            margin-top: 50px;
+            display: inline-block;
+        }
+
+        .tarja {
+            background-color: black;
+            width: 20vw;
+            height: 60px;
+        }
+
+        h1 {
+            margin-left: 20px;
+            font-size: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="titulo tarja">
+            </div>
+            <div class="titulo">
+                <h1>COLUMN CHART</h1>
+            </div>
+    </header>
+
+    <main>
+        <div class="circulo_ico ico01"></div>
+        <div class="circulo_ico ico02"></div>
+        <div class="circulo_ico ico03"></div>
+        <div class="circulo_ico ico04"></div>
+    </main>
+
+</body>
+
+</html>
