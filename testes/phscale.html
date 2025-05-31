@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala pH</title>
+    <style>
+        :root {
+            --cor00: #535353;
+            --cor01: #f2192a;
+            --cor02: #f5642b;
+            --cor03: #f8c715;
+            --cor04: #f6e921;
+            --cor05: #b4d431;
+            --cor06: #85c344;
+            --cor07: #4db749;
+            --cor08: #38aa4b;
+            --cor09: #22b476;
+            --cor10: #0cbab8;
+            --cor11: #4791d2;
+            --cor12: #3a52ac;
+            --cor13: #5952a2;
+            --cor14: #664699;
+            --cor15: #462c85;
+
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: var(--cor00);
+            font-size: 0;
+            /* remove espaços entre os divs inline-blocks */
+        }
+
+        h1 {
+            padding-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .c01 {
+            background: var(--cor01);
+        }
+
+        .c02 {
+            background: var(--cor02);
+        }
+
+        .c03 {
+            background: var(--cor03);
+        }
+
+        .c04 {
+            background: var(--cor04);
+        }
+
+        .c05 {
+            background: var(--cor05);
+        }
+
+        .c06 {
+            background: var(--cor06);
+        }
+
+        .c07 {
+            background: var(--cor07);
+        }
+
+        .c08 {
+            background: var(--cor08);
+        }
+
+        .c09 {
+            background: var(--cor09);
+        }
+
+        .c10 {
+            background: var(--cor10);
+        }
+
+        .c11 {
+            background: var(--cor11);
+        }
+
+        .c12 {
+            background: var(--cor12);
+        }
+
+        .c13 {
+            background: var(--cor13);
+        }
+
+        .c14 {
+            background: var(--cor14);
+        }
+
+        .c15 {
+            background: var(--cor15);
+        }
+
+        .bloco {
+            display: inline-block;
+            width: 6.25%;
+            /* 100% dividido por 16 blocos (aproximado) */
+            max-width: 80px;
+            /* para evitar blocos muito largos em telas grandes */
+            height: 25vw;
+            /* proporcional à largura da tela */
+            max-height: 200px;
+            color: white;
+            font-size: clamp(16px, 4vw, 40px);
+            /* 
+            clamp(MÍNIMO, IDEAL, MÁXIMO)
+            Ele escolhe o valor intermediário mais próximo, dentro dos limites. No seu caso:
+                16px → é o tamanho mínimo da fonte (nunca ficará menor que isso).
+                4vw → é o tamanho ideal, que depende da largura da janela (vw = viewport width = 1% da largura da tela).
+                30px → é o tamanho máximo da fonte (nunca ficará maior que isso).
+            Em resumo, significa:
+            “Use um tamanho de fonte que se ajusta automaticamente à largura da tela, mas que nunca fique menor que 16px, nem maior que 30px.”
+            */
+            font-weight: bolder;
+            position: relative;
+            border-radius: 0 0 clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px);
+            /* 
+            A borda inferior dos blocos vai:
+                Ter no mínimo 10px
+                Crescer com a tela usando 2vw
+                Ter no máximo 20px
+            Assim, o arredondamento vai parecer mais suave em telas pequenas e mais marcado em telas grandes — sem exagerar.
+            */
+            margin-bottom: clamp(10px, 2vw, 20px);
+        }
+
+        .nr {
+            position: absolute;
+            bottom: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .legenda {
+            position: relative;
+            width: 30%;
+            max-width: 390px;
+            display: inline-block;
+            font-size: clamp(16px, 3vw, 26px);
+        }
+
+        .l01 {
+            text-align: left;
+        }
+
+        .l02 {
+            text-align: center;
+        }
+
+        .l03 {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Escala pH</h1>
+    <div>
+        <div class="bloco c01"><span class="nr">0</span></div>
+        <div class="bloco c02"><span class="nr">1</span></div>
+        <div class="bloco c03"><span class="nr">2</span></div>
+        <div class="bloco c04"><span class="nr">3</span></div>
+        <div class="bloco c05"><span class="nr">4</span></div>
+        <div class="bloco c06"><span class="nr">5</span></div>
+        <div class="bloco c07"><span class="nr">6</span></div>
+        <div class="bloco c08"><span class="nr">7</span></div>
+        <div class="bloco c09"><span class="nr">8</span></div>
+        <div class="bloco c10"><span class="nr">9</span></div>
+        <div class="bloco c11"><span class="nr">10</span></div>
+        <div class="bloco c12"><span class="nr">11</span></div>
+        <div class="bloco c13"><span class="nr">12</span></div>
+        <div class="bloco c14"><span class="nr">13</span></div>
+        <div class="bloco c15"><span class="nr">14</span></div>
+    </div>
+    <div>
+        <div class="legenda l01">Ácido</div>
+        <div class="legenda l02">Neutro</div>
+        <div class="legenda l03">Base</div>
+    </div>
+</body>
+
+</html>
