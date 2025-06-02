@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Charts</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --cor00: #b2d235;
+            --cor01: #ffdd00;
+            --cor02: #f2c900;
+            --cor03: #d6ae05;
+            --cor04: #e81e26;
+            --cor05: #fff197;
+
+            --fonte01: "Roboto", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--cor00);
+        }
+
+        main {
+            text-align: center;
+        }
+
+        .head {
+            width: 100%;
+            height: 200px;
+            position: relative;
+        }
+
+        .tarja {
+            display: table-cell;
+            background-color: black;
+            width: 15vw;
+            height: clamp(20px, 5vw, 60px);
+        }
+
+        h1 {
+            padding-left: 20px;
+            font-family: var(--fonte01);
+            font-size: clamp(40px, 6vw, 70px);
+            display: table-cell;
+            vertical-align: middle;
+            line-height: 1em;
+        }
+
+        .titulo {
+            width: 100vw;
+            height: clamp(20px, 5vw, 60px);
+            position: absolute;
+            bottom: 0px;
+            display: table;
+            vertical-align: middle;
+            /* 
+            display: table faz um elemento se comportar como uma tabela HTML, enquanto display: table-cell faz com que um elemento se comporte como uma célula de tabela.
+            Em termos mais detalhados: display: table define um elemento como um recipiente de tabela, permitindo que seus filhos sejam organizados em linhas e células, como em uma tabela HTML. display: table-cell define um elemento como uma célula de tabela, que pode ser usada dentro de um elemento com display: table para criar a estrutura de uma tabela. 
+            -- Como display table vc consegue usar vertical align middle
+            */
+        }
+
+        .coluna {
+            display: inline-block;
+            width: 25%;
+            height: 440px;
+            max-width: 200px;
+            background-color: aqua;
+            border: 1px solid black;
+            margin-top: 80px;
+        }
+
+        .coluna:not(:last-child) {
+            margin-right: 80px;
+            /* adiciona espaço depois da coluna que não é a última */
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="head">
+        <div class="titulo">
+            <div class="tarja"></div>
+            <h1>COLUMN CHART</h1>
+        </div>
+    </header>
+    <main>
+        <div class="coluna"></div>
+        <div class="coluna"></div>
+        <div class="coluna"></div>
+        <div class="coluna"></div>
+    </main>
+</body>
+
+</html>
